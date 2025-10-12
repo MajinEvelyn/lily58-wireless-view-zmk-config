@@ -18,6 +18,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
+            quick-tap-ms = <400>;
+            require-prior-idle-ms = <400>;
         };
 
         layuh: layuh {
@@ -28,6 +30,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
+            quick-tap-ms = <500>;
+            require-prior-idle-ms = <500>;
         };
     };
 
