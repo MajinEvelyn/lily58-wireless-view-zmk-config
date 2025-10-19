@@ -8,7 +8,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&mt { tapping-term-ms = <400>; };
+&mt {
+    tapping-term-ms = <400>;
+    flavor = "tap-preferred";
+};
 
 / {
     behaviors {
@@ -34,6 +37,15 @@
             flavor = "tap-preferred";
             quick-tap-ms = <500>;
             require-prior-idle-ms = <500>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <14 20>;
         };
     };
 
@@ -130,11 +142,11 @@
 
             display-name = "5";
             bindings = <
-&kp ESC           &layuh 0 NUMBER_1  &layuh 1 NUMBER_2  &layuh 2 NUMBER_3   &layuh 3 NUMBER_4  &layuh 4 N5                           &kp NUMBER_6   &kp NUMBER_7       &kp NUMBER_8         &kp NUMBER_9     &kp NUMBER_0  &kp EQUAL
-&kp TAB           &kp Q              &kp W              &kp E               &kp R              &kp T                                 &kp Y          &kp U              &kp I                &kp O            &kp P         &kp MINUS
-&kp LEFT_SHIFT    &mt F2 A           &mt LEFT_ALT S     &mt LEFT_CONTROL D  &mt LEFT_SHIFT F   &mt RETURN G                          &mt RET H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &kp SEMI      &kp SQT
-&kp LEFT_CONTROL  &kp Z              &kp X              &kp C               &kp V              &kp B         &kp F2       &kp RET    &kp N          &kp M              &kp COMMA            &kp DOT          &kp FSLH      &kp BACKSLASH
-                                                        &kp LALT            &kp F2             &kp DELETE    &kp SPACE    &kp SPACE  &kp BACKSPACE  &to 3              &kp RGUI
+&kp ESC           &layuh 0 NUMBER_1  &layuh 1 NUMBER_2  &layuh 2 NUMBER_3  &layuh 3 NUMBER_4  &layuh 4 N5                           &kp NUMBER_6   &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
+&kp TAB           &kp Q              &kp W              &kp E              &kp R              &kp T                                 &kp Y          &kp U              &kp I         &kp O         &kp P         &kp MINUS
+&kp LEFT_SHIFT    &kp A              &kp S              &kp D              &mt LEFT_SHIFT F   &mt RETURN G                          &mt RET H      &mt RIGHT_SHIFT J  &kp K         &kp L         &kp SEMI      &kp SQT
+&kp LEFT_CONTROL  &kp Z              &kp X              &kp C              &kp V              &kp B         &kp F2       &kp RET    &kp N          &kp M              &kp COMMA     &kp DOT       &kp FSLH      &kp BACKSLASH
+                                                        &kp LALT           &kp F2             &kp DELETE    &kp SPACE    &kp SPACE  &kp BACKSPACE  &to 3              &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
