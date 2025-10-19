@@ -46,6 +46,8 @@
         f2 {
             bindings = <&kp F2>;
             key-positions = <14 20>;
+            layers = <4>;
+            require-prior-idle-ms = <50>;
         };
     };
 
