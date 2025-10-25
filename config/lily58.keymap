@@ -49,6 +49,13 @@
             layers = <4>;
             require-prior-idle-ms = <50>;
         };
+
+        enter {
+            bindings = <&kp RETURN>;
+            key-positions = <38 39>;
+            layers = <4>;
+            require-prior-idle-ms = <50>;
+        };
     };
 
     keymap {
