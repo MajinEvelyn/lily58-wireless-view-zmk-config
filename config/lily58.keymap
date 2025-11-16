@@ -70,6 +70,13 @@
             layers = <0 1>;
             require-prior-idle-ms = <50>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <20 21>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1>;
+        };
     };
 
     keymap {
