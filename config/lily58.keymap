@@ -77,6 +77,34 @@
             require-prior-idle-ms = <50>;
             layers = <0 1>;
         };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <39 38>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <47 46>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1>;
+        };
+
+        baselayer {
+            bindings = <&to 0>;
+            key-positions = <40 41>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1>;
+        };
+
+        numlayer {
+            bindings = <&to 1>;
+            key-positions = <44 45>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1>;
+        };
     };
 
     keymap {
