@@ -36,6 +36,16 @@
             quick-tap-ms = <500>;
             require-prior-idle-ms = <500>;
         };
+
+        capshold: capshold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPSHOLD";
+            bindings = <&caps_word>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -43,7 +53,7 @@
 
         f2 {
             bindings = <&kp F2>;
-            key-positions = <15 14>;
+            key-positions = <38 39>;
             layers = <0 1 3>;
             require-prior-idle-ms = <50>;
         };
@@ -71,35 +81,35 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <20 21>;
+            key-positions = <47 46>;
             require-prior-idle-ms = <50>;
             layers = <0 1 3>;
         };
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <39 38>;
+            key-positions = <14 15>;
             require-prior-idle-ms = <50>;
             layers = <0 1 3>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <47 46>;
+            key-positions = <21 20>;
             require-prior-idle-ms = <50>;
             layers = <0 1 3>;
         };
 
         baselayer {
             bindings = <&to 0>;
-            key-positions = <13 14>;
+            key-positions = <26 25>;
             require-prior-idle-ms = <100>;
             layers = <0 1 3>;
         };
 
         numlayer {
             bindings = <&to 1>;
-            key-positions = <21 22>;
+            key-positions = <34 33>;
             require-prior-idle-ms = <100>;
             layers = <0 1 3>;
         };
@@ -118,11 +128,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC           &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4      &kp N5                              &layuh 0 NUMBER_6  &layuh 1 N7        &layuh 2 N8          &layuh 3 N9      &layuh 4 N0             &kp EQUAL
-&kp TAB           &kp Q           &kp W           &kp E               &kp R             &kp T                               &kp Y              &kp U              &kp I                &kp O            &kp P                   &kp MINUS
-&kp LEFT_SHIFT    &numpadtap 3 A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                               &kp H              &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &numpadtap 3 SEMICOLON  &kp SQT
-&kp LEFT_CONTROL  &kp Z           &kp X           &kp C               &kp V             &kp B       &kp F2       &kp RET    &kp N              &kp M              &kp COMMA            &kp DOT          &kp FSLH                &kp BACKSLASH
-                                                  &kp LALT            &to 0             &kp DELETE  &kp SPACE    &kp SPACE  &kp BACKSPACE      &to 1              &kp RGUI
+&kp ESC           &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4      &kp N5                                 &layuh 0 NUMBER_6  &layuh 1 N7        &layuh 2 N8          &layuh 3 N9      &layuh 4 N0             &kp EQUAL
+&kp TAB           &kp Q           &kp W           &kp E               &kp R             &kp T                                  &kp Y              &kp U              &kp I                &kp O            &kp P                   &kp MINUS
+&kp LEFT_SHIFT    &numpadtap 3 A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &capshold 0 G                          &capshold 0 H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &numpadtap 3 SEMICOLON  &kp SQT
+&kp LEFT_CONTROL  &kp Z           &kp X           &kp C               &kp V             &kp B          &kp F2       &kp RET    &kp N              &kp M              &kp COMMA            &kp DOT          &kp FSLH                &kp BACKSLASH
+                                                  &kp LALT            &to 0             &kp DELETE     &kp SPACE    &kp SPACE  &kp BACKSPACE      &to 1              &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
