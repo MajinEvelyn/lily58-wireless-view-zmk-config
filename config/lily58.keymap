@@ -115,20 +115,6 @@
             layers = <0 1 3>;
         };
 
-        configlayer {
-            bindings = <&to 2>;
-            key-positions = <37 38 39 40>;
-            layers = <0 1 3>;
-            require-prior-idle-ms = <300>;
-        };
-
-        gamelayer {
-            bindings = <&to 4>;
-            key-positions = <45 46 47 48>;
-            layers = <0 1 3>;
-            require-prior-idle-ms = <300>;
-        };
-
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <13 14>;
@@ -150,10 +136,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC           &kp NUMBER_1   &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4      &kp N5                                 &layuh 0 NUMBER_6  &layuh 1 N7        &layuh 2 N8          &layuh 3 N9      &layuh 4 N0            &kp EQUAL
-&kp TAB           &kp Q          &kp W           &kp E               &kp R             &kp T                                  &kp Y              &kp U              &kp I                &kp O            &kp P                  &kp MINUS
-&kp LEFT_SHIFT    &layertap 3 A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &capshold 0 G                          &capshold 0 H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &layertap 5 SEMICOLON  &kp SQT
-&kp LEFT_CONTROL  &kp Z          &kp X           &kp C               &kp V             &kp B          &kp F2       &kp RET    &kp N              &kp M              &kp COMMA            &kp DOT          &mt RIGHT_GUI SLASH    &kp BACKSLASH
+&kp ESC           &kp NUMBER_1    &kp NUMBER_2   &kp NUMBER_3        &kp NUMBER_4      &kp N5                                 &layuh 0 NUMBER_6  &layuh 1 N7        &layuh 2 N8          &layuh 3 N9    &layuh 4 N0              &kp EQUAL
+&kp TAB           &kp Q           &kp W          &kp E               &kp R             &kp T                                  &kp Y              &kp U              &kp I                &kp O          &layuh 4 P               &kp MINUS
+&kp LEFT_SHIFT    &mt LEFT_ALT A  &layertap 3 S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &capshold 0 G                          &capshold 0 H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &layertap 5 L  &mt RIGHT_ALT SEMICOLON  &kp SQT
+&kp LEFT_CONTROL  &layuh 2 Z      &kp X          &kp C               &kp V             &kp B          &kp F2       &kp RET    &kp N              &kp M              &kp COMMA            &kp DOT        &mt RIGHT_GUI SLASH      &kp BACKSLASH
                                                  &kp LALT            &to 0             &kp DELETE     &kp SPACE    &kp SPACE  &kp BACKSPACE      &to 1              &kp RGUI
             >;
 
@@ -170,11 +156,11 @@
 
             display-name = "Num";
             bindings = <
-&kp ESC           &to 0         &to 1                  &to 2                      &to 3                    &to 4                               &kp F2         &kp LEFT            &kp DOWN              &kp RIGHT          &kp UP_ARROW   &kp GRAVE
-&kp TAB           &trans        &trans                 &kp MINUS                  &kp PLUS                 &kp EQUAL                           &kp EQUAL      &kp ASTERISK        &kp SLASH             &kp BACKSLASH      &kp SEMICOLON  &kp COLON
-&kp LEFT_SHIFT    &kp NUMBER_1  &mt LEFT_ALT NUMBER_2  &mt LEFT_CONTROL NUMBER_3  &mt LEFT_SHIFT NUMBER_4  &kp N5                              &kp NUMBER_6   &mt RIGHT_SHIFT N7  &mt RIGHT_CONTROL N8  &mt RIGHT_ALT N9   &kp N0         &kp SQT
-&kp LEFT_CONTROL  &trans        &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS      &kp PERIOD               &kp COMMA   &kp F2       &kp RET    &kp COMMA      &kp PERIOD          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans         &trans
-                                                       &kp LALT                   &to 0                    &kp DELETE  &kp SPACE    &kp SPACE  &kp BACKSPACE  &to 1               &kp RGUI
+&kp ESC           &to 0                  &to 1                 &to 2                      &to 3                    &to 4                               &kp F2         &kp LEFT            &kp DOWN              &kp RIGHT          &kp UP_ARROW            &kp GRAVE
+&kp TAB           &trans                 &trans                &kp MINUS                  &kp PLUS                 &kp EQUAL                           &kp EQUAL      &kp ASTERISK        &kp SLASH             &kp BACKSLASH      &kp SEMICOLON           &kp COLON
+&kp LEFT_SHIFT    &mt LEFT_ALT NUMBER_1  &layertap 3 NUMBER_2  &mt LEFT_CONTROL NUMBER_3  &mt LEFT_SHIFT NUMBER_4  &kp N5                              &kp NUMBER_6   &mt RIGHT_SHIFT N7  &mt RIGHT_CONTROL N8  &lt 5 N9           &mt RIGHT_ALT NUMBER_0  &kp SQT
+&kp LEFT_CONTROL  &trans                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &kp PERIOD               &kp COMMA   &kp F2       &kp RET    &kp COMMA      &kp PERIOD          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans                  &trans
+                                                               &kp LALT                   &to 0                    &kp DELETE  &kp SPACE    &kp SPACE  &kp BACKSPACE  &to 1               &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -193,7 +179,7 @@
 &kp ESC    &to 0           &to 1          &to 2          &to 4            &to 0                                  &kp F2         &kp LEFT   &kp DOWN  &kp RIGHT       &kp UP_ARROW  &kp GRAVE
 &kp TAB    &kp KP_NUMLOCK  &kp CAPSLOCK   &kp C_MUTE     &kp PRINTSCREEN  &bt BT_CLR                             &kp F1         &kp F2     &kp F3    &kp F4          &kp F5        &kp F6
 &kp LCTRL  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3    &bt BT_DISC 4                          &kp F6         &kp F7     &kp F8    &kp F9          &kp F10       &kp F12
-&kp LSHFT  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4   &kp RET      &kp RET    &kp F11        &kp F12    &kp F13   &studio_unlock  &sys_reset    &bt BT_CLR
+&kp LSHFT  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4   &kp RET      &kp RET    &kp F11        &kp F12    &to 0     &studio_unlock  &sys_reset    &bt BT_CLR
                                           &kp LALT       &kp PERCENT      &kp DELETE     &kp SPACE    &kp SPACE  &kp BACKSPACE  &kp GRAVE  &kp RGUI
             >;
 
@@ -202,11 +188,11 @@
 
         NumPad {
             bindings = <
-&trans  &trans    &trans                     &trans                          &trans                   &trans                             &trans    &trans                    &trans  &trans  &trans          &trans
-&trans  &trans    &kp BACKSLASH              &kp MINUS                       &kp PLUS                 &kp EQUAL                          &kp FSLH  &kp N7                    &kp N8  &kp N9  &kp EQUAL       &trans
-&trans  &kp STAR  &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_CONTROL RIGHT_BRACKET  &mt LEFT_SHIFT ASTERISK  &kp SLASH                          &kp STAR  &mt RIGHT_SHIFT NUMBER_4  &kp N5  &kp N6  &kp SEMICOLON   &trans
-&trans  &trans    &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS           &kp PERIOD               &kp COMMA  &trans       &trans     &kp N0    &kp N1                    &kp N2  &kp N3  &kp APOSTROPHE  &trans
-                                             &trans                          &trans                   &trans     &kp SPACE    &kp SPACE  &trans    &trans                    &trans
+&trans  &trans                &trans                     &trans                          &trans                   &trans                             &trans      &trans                    &trans  &trans  &trans          &trans
+&trans  &kp BACKSLASH         &kp BACKSLASH              &kp MINUS                       &kp PLUS                 &kp EQUAL                          &kp FSLH    &kp N7                    &kp N8  &kp N9  &kp EQUAL       &trans
+&trans  &kp LEFT_BRACKET      &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_CONTROL RIGHT_BRACKET  &mt LEFT_SHIFT ASTERISK  &kp SLASH                          &kp PERIOD  &mt RIGHT_SHIFT NUMBER_4  &kp N5  &kp N6  &kp SEMICOLON   &trans
+&trans  &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS           &kp PERIOD               &kp COMMA  &trans       &trans     &kp N0      &kp N1                    &kp N2  &kp N3  &kp APOSTROPHE  &trans
+                                                         &trans                          &trans                   &trans     &kp SPACE    &kp SPACE  &trans      &trans                    &trans
             >;
 
             label = "NumPad";
